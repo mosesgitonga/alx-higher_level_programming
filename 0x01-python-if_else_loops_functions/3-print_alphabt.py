@@ -4,6 +4,6 @@ for i in range(97,123):
 	if chr(i) == "q" or chr(i) == 'e':
 		continue
 	else:
-		print(f"{:c}".format(i), end = "")
+		print("{:c}".format(i), end = "")
 
 
