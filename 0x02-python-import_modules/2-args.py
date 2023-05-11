@@ -9,4 +9,4 @@ if __name__ == "__main__":
 		print("{} arguments:".format(arg))
 
 	for index, arg in enumerate(sys.argv[1:], 1):
-		print("{:d}: {:d}".format(index, arg))
+		print("{:d}: {}".format(index, arg))
