@@ -2,8 +2,8 @@
 
 import sys
 arg = len(sys.argv) - 1
-if arg <= 1:
-	print("{} argument:".format(arg))
+if arg < 1:
+	print("{} argument.".format(arg))
 else:
 	print("{} arguments:".format(arg))
 
