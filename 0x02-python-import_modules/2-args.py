@@ -11,4 +11,4 @@ if __name__ == "__main__":
         print("{:d} arguments:".format(arg))
 
     for index, arg in enumerate(sys.argv[1:], 1):
-        print("{:d}: {}".format(index, arg))
+        print("{:d}: {:s}".format(index, arg))
