@@ -4,5 +4,7 @@
 def print_matrix_integer(matrix=[[]]):
     for raw in matrix:
         for index, value in enumerate(raw):
-            print("{}".format(value), end = " ")
-        print()
+            if index != 0:
+                return " "
+            print("{}".format(value), end = "")
+        print("")
