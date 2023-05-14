@@ -2,6 +2,8 @@
 
 def print_matrix_integer(matrix=[[]]):
     for raw in matrix:
-        for value in raw:
-            print("{:d}".format(value), end = " ")
+        for index, value in enumerate(raw):
+            if index != 0:
+                print("{}".format(" "), end =  " ")
+            print("{}".format(value), end = " ")
         print()
