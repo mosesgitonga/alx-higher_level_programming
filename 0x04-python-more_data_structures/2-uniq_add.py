@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+
+def uniq_add(my_list=[]):
+    encountered = set()
+    for num in my_list:
+        if num in encountered:
+            pass
+        else:
+            encountered.add(num)
+    sum = 0
+    for number in encountered:
+        sum += number
+    return sum
+                
+    
