@@ -5,7 +5,7 @@ def safe_print_list_integers(my_list=[], x=0):
     try:
         for elem in my_list:
             if isinstance(elem, int):
-                print("{:d}".format(elem), e="")
+                print("{:d}".format(elem), end="")
                 count += 1
                 if count == x:
                     break
