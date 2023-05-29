@@ -3,7 +3,7 @@
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
     try:
-        for elem in my_list:
+        for elem in my_list[:x]:
             if isinstance(elem, int):
                 print("{:d}".format(elem), end="")
                 count += 1
