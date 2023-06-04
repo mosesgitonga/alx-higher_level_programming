@@ -1,0 +1,44 @@
+This is the doctest for 0-add_integer
+=====================================
+
+First import the "add_integer" from "0-add_integer":
+
+	>>> add_integer = __import__("0-add_integer").add_integer
+check for module docstring:
+	>>>m = __import__("0-add_integer").__doc__
+	>>>len(m) > 1
+	True
+
+check for function docstring:
+	>>>f = __import__("0-add_integer").add_integer.__doc__
+	>>>len(f) > 1
+	True
+Basic Usage:
+	>>> add_integer(1, 2)
+	3
+when one arg is passed:
+	>>>add_integer(2)
+	100
+when one string is passed:
+	>>>add_integer("man")
+	Traceback (most recent call last):
+    	...
+    	TypeError: arg must be int
+when b is string:
+	>>>add_integer(3, "man")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be int
+
+check for +ve and -ve:
+	>>>add_integer(2, -1)
+	1
+check for 0:
+	>>>add_integer(0)
+	98
+
+check for overflow:
+	>>>add_integer(1500.5)
+	1598
+
+
