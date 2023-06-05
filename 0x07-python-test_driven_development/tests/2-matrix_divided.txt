@@ -1,0 +1,51 @@
+This is a doctest for 2-matrix_divided
+========================================
+
+first import the matrix_divided from 2-matrix_divided
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+check for module docstring:
+>>> m = __import__("2-matrix_divided").__doc__
+>>> len(m) > 1
+True
+
+check for function docstring:
+>>> f = __import__("2-matrix_divided").matrix_divided.__doc__
+>>> len(f) > 1
+True
+
+"""
+...
+Trying:
+    matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+Expecting:
+    # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+Trying:
+    matrix_divided([['a', 'c', 'v'], ['a', 'b', 'c']], 3)
+Expecting:
+    # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+Trying:
+    matrix_divided([[1, 2, 3], [4, 5, 6, 8]], 3)
+Expecting:
+    # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: Each row of the matrix must have the same size
+Trying:
+    matrix_divided([[1, 2, 3], []], 3)
+Expecting:
+    # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: Each row of the matrix must have the same size
+Trying:
+    matrix_divided([[1, 2, 3], [4, 5, 6]], 2.5)
+Expecting:
+    [[0.4, 0.8, 1.2], [1.6, 2.0, 2.4]]
+"""
