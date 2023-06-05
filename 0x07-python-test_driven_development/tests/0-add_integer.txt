@@ -41,4 +41,8 @@ check for overflow:
 	>>>add_integer(1500.5)
 	1598
 
-
+adding floats:
+	>>> add_integer(2.1, 0.2)
+	2
+	>>> add_integer(2.0, 1.0)
+	3
