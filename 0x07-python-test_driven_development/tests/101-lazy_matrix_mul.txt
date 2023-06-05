@@ -1,0 +1,34 @@
+This is a Doctyptype about multiplying numby matrices
+========================================================
+
+# First, import the lazy_matrix_mul function from the correct module
+
+>>> from lazy_matrix_mul import lazy_matrix_mul
+>>> import numpy as np
+
+
+# Check the function docstring
+
+>>> len(lazy_matrix_mul.__doc__) > 1
+True
+
+# Perform matrix multiplication with sample matrices
+
+>>> m_a = np.array([[1, 2], [3, 4]])
+>>> m_b = np.array([[5, 6], [7, 8]])
+>>> result = lazy_matrix_mul(m_a, m_b)
+
+# Check if the result is a numpy.ndarray
+
+>>> isinstance(result, np.ndarray)
+True
+
+# Check the shape of the result
+
+>>> result.shape
+(2, 2)
+
+# Check the values of the result
+
+>>> result.tolist()
+[[19, 22], [43, 50]]
