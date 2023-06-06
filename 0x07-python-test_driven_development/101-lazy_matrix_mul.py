@@ -2,6 +2,7 @@
 
 import numpy as np
 
+
 def lazy_matrix_mul(m_a, m_b):
     """
     Computes the matrix multiplication of two matrices.
@@ -15,6 +16,7 @@ def lazy_matrix_mul(m_a, m_b):
     """
     res = np.matmul(m_a, m_b)
     return res
+
 
 if __name__ == "__main__":
     import doctest
