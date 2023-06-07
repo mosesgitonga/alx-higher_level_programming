@@ -3,7 +3,12 @@
 
 
 class Rectangle:
-    """initializing rectangle"""
+    """initializing rectangle
+    Args:
+        width (int): width of rect
+        height (int): height of rect
+
+    """
 
     def __init__(self, width=0, height=0):
         self.__width = width
@@ -15,6 +20,15 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
+        """width setler
+        Args:
+            value (int): value of width
+        Raises:
+            ValueError: error
+            TypeError: error
+        Return: value (int)
+        """
+
         if value < 0:
             ValueError("width must be >= 0")
         if not isinstance(value, int):
@@ -27,6 +41,15 @@ class Rectangle:
         return self.__height
 
     def height(self, value):
+        """height setler
+        Args:
+            value (int): value of height
+        Raises:
+            ValueError: error
+            TypeError: error
+        Return: value (int)
+        """
+
         if not isinstance(value, int):
             TypeError("width must be an integer")
         if value < 0:
