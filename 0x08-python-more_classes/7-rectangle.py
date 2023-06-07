@@ -9,6 +9,7 @@ class Rectangle:
     Attributes:
         number_of_instances (int): Keeps track \
                 of the number of instances created.
+        print_symbol (char): prints symbol
 
     Methods:
         __init__(self, width=0, height=0): Initializes \
