@@ -4,5 +4,5 @@
 
 class BaseGeometry:
     """intializing class"""
-
-    pass
+    def __init__(self):
+        pass
