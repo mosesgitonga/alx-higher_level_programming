@@ -1,15 +1,21 @@
 #!/usr/bin/python3
-"""class my list"""
-
+"""Module defining the MyList class"""
 
 class MyList(list):
-    """class of mylist"""
+    """A custom list class that provides additional functionality"""
 
     def print_sorted(self):
-        """function to print list as sorted"""
+        """Prints the list in sorted (ascending) order"""
 
         sorted_list = sorted(self)
         print(sorted_list)
 
     def append(self, item):
+        """
+        Appends an item to the list.
+
+        Args:
+            item: The item to be appended to the list.
+        """
+
         super().append(item)
