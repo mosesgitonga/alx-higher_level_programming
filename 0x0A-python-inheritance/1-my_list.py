@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module defining the MyList class"""
 
+
 class MyList(list):
     """A custom list class that provides additional functionality"""
 
@@ -19,6 +20,7 @@ class MyList(list):
         """
 
         super().append(item)
+
 
 if __name__ == "__main__":
     import doctest
