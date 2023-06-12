@@ -1,29 +1,35 @@
 #!/usr/bin/python3
-"""empty class"""
+"""Module defining the BaseGeometry class"""
 
 
 class BaseGeometry:
-    """intializing class"""
+    """A base class for geometry-related operations"""
+
     def __init__(self):
+        """Initializes a BaseGeometry instance"""
         pass
 
     def area(self):
+        """Raises an exception indicating\
+                that the area() method is not implemented"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """function to validate value
-        Args:
-            name: name entered
-            value: value to validate
-            Raises:
-                ValueError: must be greater than 0
-                TypeError: must be an int
-        """
+        """Validates if a value is an integer and greater than 0.
 
+        Args:
+            name (str): The name of the value.
+            value (int): The value to validate.
+
+        Raises:
+            ValueError: If the value is less than or equal to 0.
+            TypeError: If the value is not an integer.
+        """
         if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
+            raise TypeError(f"{name} must be an integer")
         if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+            raise ValueError(f"{name} must be greater than 0")
+
 
 if __name__ == "__main__":
     import doctest
