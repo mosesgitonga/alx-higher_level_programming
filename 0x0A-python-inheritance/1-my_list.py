@@ -9,7 +9,6 @@ class MyList(list):
         """function to print list as sorted"""
 
         sorted_list = sorted(self)
-
         print(sorted_list)
 
     def append(self, item):
