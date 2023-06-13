@@ -27,6 +27,7 @@ def add_item_to_list(items: List[str], filename: str):
 
     save_to_json_file(existing_list, filename)
 
+
 if __name__ == "__main__":
     args = sys.argv[1:]
     add_item_to_list(args, "add_item.json")
