@@ -4,6 +4,8 @@ Python is really important,
 "C is fun!"
 "C is fun!"
 "C is fun!"
+"C is fun!"
+"C is fun!"
 
 "C is fun!"
 
@@ -11,6 +13,8 @@ Python is really important,
 
 But it can be very hard if:
 - You don't get all Pythonic tricks
+"C is fun!"
+"C is fun!"
 "C is fun!"
 "C is fun!"
 "C is fun!"
