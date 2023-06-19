@@ -52,6 +52,9 @@ class Rectangle(Base):
 
         Returns:
             None
+        Raises:
+            TypeError: If the provided value is not an integer.
+            ValueError: If the provided value is less than or equal to 0.
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -79,6 +82,9 @@ class Rectangle(Base):
 
         Returns:
             None
+        Raises:
+            TypeError: If the provided value is not an integer.
+            ValueError: If the provided value is less than or equal to 0.
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -106,6 +112,9 @@ class Rectangle(Base):
 
         Returns:
             None
+        Raises:
+            TypeError: If the provided value is not an integer.
+            ValueError: If the provided value is less than 0.
         """
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
@@ -133,6 +142,9 @@ class Rectangle(Base):
 
         Returns:
             None
+        Raises:
+            TypeError: If the provided value is not an integer.
+            ValueError: If the provided value is less than 0.
         """
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
@@ -142,11 +154,20 @@ class Rectangle(Base):
 
     def area(self):
         """
-        func to find area of a rectanglke
+        Returns the area of the rectangle.
+
+        Returns:
+            int: The area of the rectangle.
         """
         return self.__width * self.__height
 
     def display(self):
+        """
+        Displays the rectangle using '#' symbol based on its dimensions and position.
+
+        Returns:
+            None
+        """
         symbol = "#"
         res = ''
         for _ in range(self.__y):
@@ -154,11 +175,26 @@ class Rectangle(Base):
         for i in range(self.__height):
             print(" " * self.x + "#" * self.width)
 
-
     def __str__(self):
+        """
+        Returns a string representation of the Rectangle object.
+
+        Returns:
+            str: A string representation of the Rectangle object.
+        """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
+        """
+        Updates the attributes of the Rectangle instance.
+
+        Args:
+            *args: Variable length argument list containing attribute values.
+            **kwargs: Arbitrary keyword arguments representing attribute-value pairs.
+
+        Returns:
+            None
+        """
         if args:
             attrs = ["id", "width", "height", "x", "y"]
 
@@ -170,12 +206,15 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        return {"id" : self.id,
-                "width" : self.width,
-                "height" : self.height,
-                "x" : self.x,
-                "y" : self.y
+        """
+        Returns a dictionary representation of the Rectangle object.
+
+        Returns:
+            dict: A dictionary containing the attributes of the Rectangle object.
+        """
+        return {"id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
                 }
-
-
-
