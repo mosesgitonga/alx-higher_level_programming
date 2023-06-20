@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """class base """
 import json
+import csv
 
 
 class Base:
@@ -174,3 +175,49 @@ class Base:
         except FileNotFoundError:
             return []
 
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Saves a list of objects to a file in CSV format.
+
+        Args:
+            list_objs (list): A list of objects.
+
+        Returns:
+            None
+        """
+        filename = cls.__name__ + ".csv"
+        with open(filename, mode="w", newline='') as file:
+            writer = csv.writer(file)
+            if list_objs is not None:
+                if cls.__name__ == "Rectangle":
+                    attrs = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == "Square":
+                    attrs = ["id", "size", "x", "y"]
+
+                writer.writerow(attrs)
+
+                for obj in list_objs:
+                    row = [getattr(obj, attr) for attr in attrs]
+                    writer.writerow(row)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Loads a list of objects from a CSV file.
+
+        Returns:
+            list: A list of objects.
+        """
+        filename = cls.__name__ + ".csv"
+        objects = []
+        with open(filename, mode="r") as file:
+            reader = csv.reader(file)
+            attrs = next(reader)  # Get the attribute names
+
+            for row in reader:
+                dictionary = {attr: int(value) for attr, value in zip(attrs, row)}
+                obj = cls.create(**dictionary)
+                objects.append(obj)
+
+        return objects
