@@ -1,9 +1,11 @@
 #!/usr/bin/node
 
-let x = 1;
-while (x !== 2) {
-  console.log('C is fun');
-  console.log('Python is cool');
-  console.log('JavaScript is amazing');
-  x = 2;
+const languages = [
+  'C is fun',
+  'Python is cool',
+  'JavaScript is amazing'
+];
+
+for (const language of languages) {
+  console.log(language);
 }
