@@ -2,7 +2,7 @@
 
 const x = process.argv[2];
 if (x === undefined) {
-  console.log('Missing number of occurrences')
+  console.log('Missing number of occurrences');
 }
 
 for (let i = 0; i < x; i++) {
