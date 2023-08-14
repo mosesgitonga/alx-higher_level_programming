@@ -8,7 +8,7 @@ if (isNaN(x) || x <= 0) {
   for (let i = 0; i < x; i++) {
 	let line = '';
 	for (let j = 0; j < x; j++) {
-	  line += 'X';
+	  line += 'x';
 	}
 	console.log(line);
   }
