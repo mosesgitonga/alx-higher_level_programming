@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 class Rectangle {
-  constructor(width, height) {
+  constructor (width, height) {
     if (typeof width !== 'number' || width <= 0) {
       return 'Rectangle {}';
     } else if (typeof height !== 'number' || height <= 0) {
