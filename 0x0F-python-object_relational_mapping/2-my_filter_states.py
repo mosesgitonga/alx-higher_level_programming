@@ -22,8 +22,8 @@ if __name__ == "__main__":
     cur = db.cursor()
     search = argv[4]
 
-    query = "SELECT id, name FROM states WHERE name LIKE %s ORDER BY id"
-    cur.execute(query, ('%' + search + '%',))
+    cur.execute("SELECT id, name FROM states WHERE name LIKE \
+            BINARY '{}' ORDER BY id".format(argv[4]))
     rows = cur.fetchall()
 
     for row in rows:
