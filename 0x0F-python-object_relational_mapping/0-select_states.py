@@ -15,7 +15,6 @@ def main():
     password = sys.argv[2]
     database = sys.argv[3]
 
-    # Connecting to the database
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -24,20 +23,15 @@ def main():
         db='hbtn_0e_0_usa'
     )
 
-    # Create the cursor
     cur = db.cursor()
 
-    # Executing the query
     cur.execute("SELECT * FROM states ORDER BY id")
 
-    # Obtain query results
     rows = cur.fetchall()
 
-    # Print the results
     for row in rows:
         print(row)
 
-    # Close the cursor and the connection
     cur.close()
     db.close()
 
