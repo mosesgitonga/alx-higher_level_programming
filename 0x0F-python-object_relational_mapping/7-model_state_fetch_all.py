@@ -12,9 +12,9 @@ if __name__ == "__main__":
     session = Session()
 
 
-    state_data = session.query(State.id, State.name).all()
+    state_data = session.query(State).order_by(State.id).all()
 
-    for state_id, state_name in state_data:
-        print(state_id, state_name)
+    for state in state_data:
+        print("{}: {}".format(state.id, state.name))
 
     session.close()
