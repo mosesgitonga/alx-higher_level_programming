@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+city
+"""
 
 import sys
 from sqlalchemy import create_engine
@@ -9,6 +12,9 @@ Base = declarative_base()
 
 
 class City(Base):
+    """
+    cities table
+    """
     __tablename__ = "cities"
 
     id = Column(Integer, primary_key=True, nullable=False)
