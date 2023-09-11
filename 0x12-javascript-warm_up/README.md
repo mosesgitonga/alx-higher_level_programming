@@ -1,12 +1,3 @@
-0x12. JavaScript - Warm up
-JavaScript
-
-    By: Guillaume
-    Weight: 1
-    Project will start Sep 11, 2023 6:00 AM, must end by Sep 12, 2023 6:00 AM
-    Checker will be released at Sep 11, 2023 12:00 PM
-    An auto review will be launched at the deadline
-
 Background Context
 
 JavaScript is used for many things. Here, you will use JavaScript for 2 reasons:
@@ -74,17 +65,4 @@ General
     Your code should be semistandard compliant (version 16.x.x). Rules of Standard + semicolons on top. Also as reference: AirBnB style
     All your files must be executable
     The length of your files will be tested using wc
-
-More Info
-Install Node 14
-
-$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-$ sudo apt-get install -y nodejs
-
-Install semi-standard
-
-Documentation
-
-$ sudo npm install semistandard --global
-
 
