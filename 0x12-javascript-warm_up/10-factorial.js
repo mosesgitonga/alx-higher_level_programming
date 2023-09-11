@@ -11,4 +11,6 @@ const target = parseInt(process.argv[2]);
 if (!isNaN(target)) {
   const res = factorial(target);
   console.log(res);
+} else {
+  console.log('1');
 }
