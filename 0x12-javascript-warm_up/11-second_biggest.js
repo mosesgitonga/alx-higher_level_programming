@@ -1,18 +1,11 @@
 #!/usr/bin/node
 const args = process.argv;
-const lenArgs = args.length - 2;
-let biggest = Number.NEGATIVE_INFINITY;
+const lenArgs = args.length;
 
-if (lenArgs <= 2) {
+if (lenArgs <= 3) {
   console.log(0);
 } else {
-  for (let i = 2; i <= lenArgs + 1; i++) {
-    const currNumber = parseFloat(args[i]);
-    if (!isNaN(currNumber) && currNumber > biggest) {
-      biggest = currNumber;
-    }
-  }
-}
-if (biggest !== Number.NEGATIVE_INFINITY) {
-  console.log(biggest);
+  const list = args.sort();
+  const res = list.reverse()[1];
+  console.log(res);
 }
