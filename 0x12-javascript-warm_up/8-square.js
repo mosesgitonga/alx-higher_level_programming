@@ -8,5 +8,5 @@ if (!isNaN(num) && num >= 0) {
     console.log('X'.repeat(num));
   }
 } else {
-  console.log('Missing size')
+  console.log('Missing size');
 }
