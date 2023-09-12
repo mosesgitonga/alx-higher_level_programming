@@ -7,17 +7,17 @@ class Square extends Mysquare {
     super(size, size);
   }
 
-  charPrint (c) {
+  charPrint(c) {
     if (c === undefined) {
-      for (let i = 1; i <= this.height; i++) {
-        console.log('X'.repeat(this.height));
+      c = 'X';
       }
-    } else {
-      for (let i = 1; i <= this.height; i++) {
-        console.log('C'.repeat(this.height));
-      }
+
+    for (let i = 1; i <= this.height; i++) {
+      console.log(c.repeat(this.height));
+
     }
+   }
   }
-}
+
 
 module.exports = Square;
