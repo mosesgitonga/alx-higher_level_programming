@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+prevetingSQL injection
+"""
 from sys import argv
 import MySQLdb
 
