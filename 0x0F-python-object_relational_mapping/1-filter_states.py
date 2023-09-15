@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """filter states"""
 import MySQLdb
+from sys import argv
+if __name__ == '__main__':
+    db = MySQLdb.connect(
+        host='localhost', port=3306, user=argv[1], passwd=argv[2], db=argv[3]
+        )
+    cur = db.cursor()
 
-db = MySQLdb.connect(
-    host='localhost', port=3306, passwd='root', db='hbtn_0e_0_usa'
-    )
-cur = db.cursor()
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
+    rows = cur.fetchall()
 
-cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
-rows = cur.fetchall()
-
-for row in rows:
-    print(f"{row}")
+    for row in rows:
+       print(f"{row}")
