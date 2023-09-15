@@ -9,9 +9,11 @@ if __name__ == '__main__':
         )
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name='{}'".format(argv[4]))
+    cur.execute("SELECT * FROM states WHERE states.name='{}'".format(argv[4]))
 
     rows = cur.fetchall()
 
     for row in rows:
         print(row)
+    cur.close()
+    db.close()
