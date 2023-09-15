@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""filter states"""
 import MySQLdb
 
 db = MySQLdb.connect(
