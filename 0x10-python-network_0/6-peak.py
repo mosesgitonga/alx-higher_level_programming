@@ -9,9 +9,8 @@ def find_peak(list_of_integers):
     finding the peak of a list
         -> it must return a single number
     """
-    list = list_of_integers
-    for i in range(len(list)):
-        if list[i] + 1 > list[i] and list[i] > list[i] - 1:
-            return list[i]
-        else:
-            pass
+    max_i = None
+    for ele in list_of_integers:
+        if max_i is None or max_i < ele:
+            max_i = ele
+    return max_i
