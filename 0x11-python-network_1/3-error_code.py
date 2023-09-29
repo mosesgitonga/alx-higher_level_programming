@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""pythin script that takes in url and returns 
+"""pythin script that takes in url and returns
 the content in the response"""
 
 
