@@ -3,6 +3,7 @@
 script that fetches the content of a url
 """
 
+
 import urllib.request
 if __name__ == "__main__":
     url = "https://alx-intranet.hbtn.io/status"
