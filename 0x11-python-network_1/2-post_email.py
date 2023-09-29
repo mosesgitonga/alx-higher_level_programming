@@ -3,6 +3,7 @@
 python script that takes in a url
 """
 
+
 import urllib.request
 import urllib.parse
 from sys import argv
