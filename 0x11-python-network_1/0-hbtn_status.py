@@ -13,6 +13,5 @@ if __name__ == "__main__":
             print("\t- type: {}".format(type(body)))
             print("\t- content: {}".format(body))
             print("\t- utf-8 content: {}".format(decoded_content))
-
     except:
         pass
