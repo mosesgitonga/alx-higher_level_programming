@@ -17,7 +17,7 @@ if __name__ == "__main__":
     try:
         res = response.json()
         if res:
-            print(f"<{res.headers.get('id')}]> <{response.headers.get('name')}>")
+            print(f"[{res.get('id')}] {res.get('name')}")
         else:
             print("No result")
     except ValueError:
