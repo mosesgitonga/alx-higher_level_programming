@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 const fs = require('fs');
 const arg = process.argv.slice(2);
 const filename = arg[0];
